@@ -1,11 +1,11 @@
 import * as React from 'react';
-import './styles/App.scss';
-
-import NavigationBar from "./components/nvgtbar/NavigationBar";
+import 'styles/app.scss';
+import 'styles/defaults.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import NavigationBar from "components/nvgtbar/NavigationBar";
+import Home from "components/Home";
+import About from "components/About";
+import Contact from "components/Contact";
 
 const App: React.FC = () => {
   return (

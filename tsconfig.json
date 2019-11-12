@@ -7,7 +7,9 @@
         "jsx": "react",
         "baseUrl": ".",
         "paths": {
-            "Banner/*": ["./app/src/components/Banner/*"]
+            "components/*": ["./app/src/components/*"],
+            "styles/*": ["./app/src/styles/*"],
+            "img/*": ["./app/src/img/*"]
         }
     },
     "include": ["./app/**/*"]

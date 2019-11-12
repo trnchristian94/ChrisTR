@@ -5,12 +5,19 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import Icon from "components/core/view/Icon";
+import './navBar.scss';
 
 class NavigationBar extends React.Component {
     render() {
         return (
             <Navbar bg="dark" variant="dark">
-              <Navbar.Brand href="#home">Christian T.R.</Navbar.Brand>
+              <a href="#home">
+                <div id="navBar-webName">
+                  <Navbar.Brand className="name">Christian T.R.</Navbar.Brand>
+                  <Icon name="logo"/>
+                </div>
+              </a>
               <Nav className="mr-auto">
                 <li>
                   <Link to={"/"} className="nav-link">

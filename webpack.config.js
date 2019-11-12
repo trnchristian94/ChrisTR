@@ -9,7 +9,9 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
         alias: {
-            Banner: path.resolve(__dirname, 'app/src/components/Banner/')
+            components: path.resolve(__dirname, 'app/src/components/'),
+            styles: path.resolve(__dirname, 'app/src/styles/'),
+            img: path.resolve(__dirname, 'app/src/img/')
         }
     },
     devtool: "source-map",
