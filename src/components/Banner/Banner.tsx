@@ -10,7 +10,7 @@ export default class Banner extends React.Component<IProps> {
     return (
       <div className="banner">
         <span className="banner__text">
-          Recuerda poners bien los paths! {this.props.name}
+          Recuerda poners bien los paths {this.props.name} !
         </span>
       </div>
     );

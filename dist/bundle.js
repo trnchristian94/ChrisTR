@@ -167,7 +167,7 @@ function (_React$Component) {
         className: "banner"
       }, React.createElement("span", {
         className: "banner__text"
-      }, "Bye .sdadasdasdd.. ", this.props.name, " JODEEEEEEEEEEEEEER"));
+      }, "Recuerda poners bien los paths ", this.props.name, " !"));
     }
   }]);
 
@@ -205,7 +205,7 @@ var Banner_1 = __webpack_require__(/*! Banner/Banner */ "./app/src/components/Ba
 __webpack_require__(/*! ./styles/global.scss */ "./app/src/styles/global.scss");
 
 ReactDOM.render(React.createElement("div", null, React.createElement(Banner_1.default, {
-  name: "Max"
+  name: "Christian"
 })), document.getElementById("app"));
 
 /***/ }),
