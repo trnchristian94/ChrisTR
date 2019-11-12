@@ -1,2 +1,2 @@
-call npm run start
+call npm run develop
 cmd /k

@@ -3,9 +3,9 @@ import 'styles/app.scss';
 import 'styles/defaults.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavigationBar from "components/nvgtbar/NavigationBar";
-import Home from "components/Home";
-import About from "components/About";
-import Contact from "components/Contact";
+import Home from "components/nvgtbar/options/Home";
+import About from "components/nvgtbar/options/About";
+import Contact from "components/nvgtbar/options/Contact";
 
 const App: React.FC = () => {
   return (
@@ -18,20 +18,12 @@ const App: React.FC = () => {
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
           </Switch>
-          <div>
-          React {React.version}
+          <div id="reactV">
+          R-{React.version}
           </div>
           <p>
-            Welcome to React
+            Welcome to Chris TR
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     </Router>
