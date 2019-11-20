@@ -6,10 +6,13 @@
         "target": "es2015",
         "jsx": "react",
         "baseUrl": ".",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
         "paths": {
             "components/*": ["./app/src/components/*"],
             "styles/*": ["./app/src/styles/*"],
-            "img/*": ["./app/src/img/*"]
+            "img/*": ["./app/src/img/*"],
+            "src/*": ["./app/src/*"]
         }
     },
     "include": ["./app/**/*"]

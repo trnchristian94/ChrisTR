@@ -11,7 +11,8 @@ module.exports = {
         alias: {
             components: path.resolve(__dirname, 'app/src/components/'),
             styles: path.resolve(__dirname, 'app/src/styles/'),
-            img: path.resolve(__dirname, 'app/src/img/')
+            img: path.resolve(__dirname, 'app/src/img/'),
+            src: path.resolve(__dirname, 'app/src/')
         }
     },
     devtool: "source-map",
@@ -41,8 +42,8 @@ module.exports = {
     },
     devServer: {
         port: 3001,
-        contentBase: path.resolve(__dirname, 'app/'), // . 
-        publicPath: '/app/dist/', // '/dist/'
+        contentBase: path.resolve(__dirname, 'app/'), 
+        publicPath: '/app/dist/',
         watchContentBase: true,
         inline: true,
         hot: true,
