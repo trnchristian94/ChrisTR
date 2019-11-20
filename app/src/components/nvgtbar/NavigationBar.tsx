@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 
 export default function NavigationBar() {
   const { t } = useTranslation();
+
   return (
     <Navbar bg="dark" variant="dark">
       <a href="#home">
@@ -24,16 +25,19 @@ export default function NavigationBar() {
         <li>
           <Link to={"/"} className="nav-link">
             {t("navBar.home")}
+            <Icon name="home" boxSize={25} />
           </Link>
         </li>
         <li>
           <Link to={"/contact"} className="nav-link">
             {t("navBar.contact")}
+            <Icon name="contact" boxSize={25} />
           </Link>
         </li>
         <li>
           <Link to={"/about"} className="nav-link">
             {t("navBar.about")}
+            <Icon name="info" boxSize={25} />
           </Link>
         </li>
       </Nav>
@@ -44,7 +48,9 @@ export default function NavigationBar() {
           placeholder={t("navBar.search")}
           className="mr-sm-2"
         />
-        <Button className="searchBtn" variant="outline-info">{t("navBar.searchBtn")}</Button>
+        <Button className="searchBtn" variant="outline-info">
+          {t("navBar.searchBtn")}
+        </Button>
       </Form>
     </Navbar>
   );

@@ -19,12 +19,37 @@
         -webkit-animation-duration: 5s;
     }
 }
-.navbar{
+
+.navbar {
     .dropdownLanguageSelector {
         margin-right: 10px;
+
+        #dropdown-basic-button {
+            width: 100px;
+        }
     }
+
     .searchBtn {
         width: 100px;
+    }
+
+    .nav-link {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+
+    .ic-home,
+    .ic-contact,
+    .ic-info {
+        display: inline-flex;
+        align-items: center;
+        fill: white;
+        margin-left: 5px;
     }
 }
 
