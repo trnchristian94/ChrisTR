@@ -1,0 +1,25 @@
+{
+    "navBar":{
+        "title": "Christian T.R.",
+        "home": "Home",
+        "contact": "Contact",
+        "about": "About",
+        "languageSelector":{
+            "language": "Language",
+            "spanish": "Spanish",
+            "french": "French",
+            "english": "English"
+        },
+        "search": "Search...",
+        "searchBtn": "Search"
+    },
+    "home":{
+    },
+    "contact":{
+    },
+    "about":{
+    },
+    "welcome": {
+        "title": "Welcome to Chris TR"
+    }
+}

@@ -1,13 +1,16 @@
-import * as React from 'react';
-import './styles/App.scss';
-
-import NavigationBar from "./components/nvgtbar/NavigationBar";
+import * as React from "react";
+import "styles/app.scss";
+import "styles/defaults.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import NavigationBar from "components/nvgtbar/NavigationBar";
+import Home from "components/nvgtbar/options/Home";
+import About from "components/nvgtbar/options/About";
+import Contact from "components/nvgtbar/options/Contact";
+
+import { useTranslation } from "react-i18next";
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Router>
       <div className="App">
@@ -18,24 +21,12 @@ const App: React.FC = () => {
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
           </Switch>
-          <div>
-          React {React.version}
-          </div>
-          <p>
-            Welcome to React
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <div id="reactV">R-{React.version}</div>
+          <p>{t("welcome.title")}</p>
         </header>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

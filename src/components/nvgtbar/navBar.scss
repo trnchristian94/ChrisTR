@@ -1,0 +1,60 @@
+#navBar-webName {
+    display: flex;
+    align-items: center;
+
+    .name {
+        z-index: 1;
+    }
+
+    .icon {
+        width: 30px;
+        position: relative;
+        right: 28px;
+        z-index: 0;
+        animation: linear infinite alternate;
+        animation-name: levitate;
+        animation-duration: 5s;
+        -webkit-animation: linear infinite alternate;
+        -webkit-animation-name: levitate;
+        -webkit-animation-duration: 5s;
+    }
+}
+.navbar{
+    .dropdownLanguageSelector {
+        margin-right: 10px;
+    }
+    .searchBtn {
+        width: 100px;
+    }
+}
+
+
+
+// Animation
+@keyframes levitate {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(0px, 3px);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes levitate {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+
+    50% {
+        transform: rotate(5deg) translate(0px, 3px);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
