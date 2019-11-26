@@ -11,7 +11,9 @@
             "english": "English"
         },
         "search": "Search...",
-        "searchBtn": "Search"
+        "searchBtn": "Search",
+        "nightModeSwitch": "Switch to night mode",
+        "lightModeSwitch": "Switch to light mode"
     },
     "home":{
     },

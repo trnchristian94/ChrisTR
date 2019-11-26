@@ -11,7 +11,9 @@
             "english": "Inglés"
         },
         "search": "Busqueda...",
-        "searchBtn": "Buscar"
+        "searchBtn": "Buscar",
+        "nightModeSwitch": "Apagar luces",
+        "lightModeSwitch": "Encender luces"
     },
     "home":{
     },
