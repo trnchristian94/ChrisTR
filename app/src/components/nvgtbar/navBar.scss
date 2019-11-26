@@ -21,6 +21,20 @@
 }
 
 .navbar {
+    .navButton {
+        margin-right: 15px;
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+
+            span {
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    }
+
     .dropdownLanguageSelector {
         margin-right: 10px;
 
@@ -31,9 +45,6 @@
 
     .searchBtn {
         width: 100px;
-    }
-
-    .nav-link {
         display: inline-flex;
         align-items: center;
 
@@ -43,9 +54,12 @@
         }
     }
 
+
+
     .ic-home,
     .ic-contact,
-    .ic-info {
+    .ic-info,
+    .ic-search {
         display: inline-flex;
         align-items: center;
         fill: white;

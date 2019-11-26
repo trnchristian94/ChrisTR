@@ -11,7 +11,9 @@
             "english": "Anglais"
         },
         "search": "Cherchez...",
-        "searchBtn": "Rechercher"
+        "searchBtn": "Rechercher",
+        "nightModeSwitch": "Mode nuit",
+        "lightModeSwitch": "Mode jour"
     },
     "home":{
     },

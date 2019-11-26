@@ -12,10 +12,10 @@ export default function Icon(props: IProps) {
       src={"src/img/icons/" + props.name + ".svg"}
       afterInjection={(error, svg) => {
         if (error) {
-          console.error(error);
+          //console.error(error);
           return;
         }
-        console.log(svg);
+        //console.log(svg);
       }}
       beforeInjection={svg => {
         svg.classList.add("icon");
