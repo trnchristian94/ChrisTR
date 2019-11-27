@@ -7,11 +7,10 @@ import Home from "components/nvgtbar/options/Home";
 import About from "components/nvgtbar/options/About";
 import Contact from "components/nvgtbar/options/Contact";
 
-import Button from "react-bootstrap/Button";
 
 import { useTranslation } from "react-i18next";
 
-import { useTheme } from "components/theme/ThemeContext.tsx";
+
 import styled from "@emotion/styled";
 
 const Wrapper = styled("div")`
@@ -23,7 +22,7 @@ const Wrapper = styled("div")`
 
 const App: React.FC = () => {
   const { t } = useTranslation();
-  const themeState = useTheme();
+  
 
   return (
     <Router>
@@ -38,11 +37,6 @@ const App: React.FC = () => {
             </Switch>
             <div id="reactV">R-{React.version}</div>
             <p>{t("welcome.title")}</p>
-            <Button onClick={() => themeState.toggle()}>
-              {themeState.dark
-                ? t("navBar.lightModeSwitch")
-                : t("navBar.nightModeSwitch")}
-            </Button>
           </header>
         </div>
       </Wrapper>
