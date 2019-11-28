@@ -1,3 +1,5 @@
+@import "src/styles/_variables.scss";
+
 .App {
   text-align: center;
 }
@@ -6,15 +8,16 @@
   height: 40vmin;
 }
 
+// Changed colors in defaultNight/Lightmode
 .App-header {
-  background-color: #282c34;
+  background-color: $black10;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $white10;
 }
 
 .App-link {

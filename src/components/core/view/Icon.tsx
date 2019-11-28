@@ -31,7 +31,7 @@ export default function Icon(props: IProps) {
       loading={() => <span>Loading</span>}
       renumerateIRIElements={false}
       wrapper="span"
-      className="wrapper-class-name"
+      className={"wrapper-class-name spanIc-" + props.name}
       onClick={() => {
         console.log("wrapper onClick");
       }}

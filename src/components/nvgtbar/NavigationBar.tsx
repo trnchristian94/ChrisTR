@@ -1,12 +1,17 @@
 import "./navBar.scss";
 import * as React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+import {
+  Button,
+  Form,
+  FormControl,
+  Nav,
+  Navbar
+} from "react-bootstrap";
+
 import Icon from "components/core/view/Icon";
+import LightSwitch from "components/theme/LightSwitch";
 import LanguageSelector from "components/core/view/LanguageSelector";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -41,6 +46,7 @@ export default function NavigationBar() {
           </Link>
         </li>
       </Nav>
+      <LightSwitch />
       <Form inline>
         <LanguageSelector />
         <FormControl

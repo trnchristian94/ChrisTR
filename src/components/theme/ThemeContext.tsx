@@ -1,6 +1,6 @@
 import React from "react";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
 import theme from "./theme";
+import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
 
 const defaultContextData = {
   dark: false,
@@ -11,7 +11,6 @@ const ThemeContext = React.createContext(defaultContextData);
 const useTheme = () => React.useContext(ThemeContext);
 
 const ThemeProvider = ({ children }: any) => {
-  console.log("theme provider");
   const [themeState, setThemeState] = React.useState({
     dark: false,
     hasThemeMounted: false
@@ -30,9 +29,9 @@ const ThemeProvider = ({ children }: any) => {
     localStorage.setItem("dark", JSON.stringify(dark));
     setThemeState({ ...themeState, dark });
   };
-  console.log(themeState.dark);
+
   const computedTheme = themeState.dark ? theme("dark") : theme("light");
-  console.log(children);
+
   return (
     <EmotionThemeProvider theme={computedTheme}>
       <ThemeContext.Provider
