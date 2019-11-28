@@ -1,0 +1,8 @@
+@import "src/styles/_variables.scss";
+
+.nightMode {
+    .App-header {
+        background-color: $black10;
+        color: $white10;
+    }
+}
