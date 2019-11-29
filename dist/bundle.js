@@ -23676,7 +23676,7 @@ exports.push([module.i, ".lightMode .App-header {\n  background-color: #f0feff;\
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".device-android,\n.device-ios {\n  /* Breakpoint only for mobile */ }\n  .device-android .navbar,\n  .device-ios .navbar {\n    padding: 5px 0px;\n    background-color: #333;\n    overflow: hidden;\n    position: fixed !important;\n    bottom: 0;\n    width: 100%; }\n    .device-android .navbar .navText,\n    .device-ios .navbar .navText {\n      display: none !important; }\n    .device-android .navbar #navBar-webName,\n    .device-ios .navbar #navBar-webName {\n      display: none; }\n    .device-android .navbar .searchBar,\n    .device-ios .navbar .searchBar {\n      display: none; }\n    .device-android .navbar .dropdown-menu,\n    .device-ios .navbar .dropdown-menu {\n      top: unset;\n      bottom: 40px; }\n", ""]);
+exports.push([module.i, ".device-android,\n.device-ios {\n  /* Breakpoint only for mobile */ }\n  .device-android .navbar,\n  .device-ios .navbar {\n    padding: 5px 0px;\n    background-color: #333;\n    position: fixed !important;\n    bottom: 0;\n    width: 100%; }\n    .device-android .navbar .navText,\n    .device-ios .navbar .navText {\n      display: none !important; }\n    .device-android .navbar #navBar-webName,\n    .device-ios .navbar #navBar-webName {\n      display: none; }\n    .device-android .navbar .searchBar,\n    .device-ios .navbar .searchBar {\n      display: none; }\n    .device-android .navbar .dropdown-menu,\n    .device-ios .navbar .dropdown-menu {\n      top: unset;\n      bottom: 40px; }\n", ""]);
 
 
 /***/ }),
