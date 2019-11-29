@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+  name="Christian TR Website"
+  content="Why are you here"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Christian TRN</title>
+</head>
+<body> 
+  <div id="app"></div>
+  <script src="./dist/bundle.js"></script>
+  <script src="/app/dist/bundle.js"></script>
+  <script>
+    var classNames = [];
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('device-ios');
+    if (navigator.userAgent.match(/android/i)) classNames.push('device-android');
+    
+    var html = document.getElementsByTagName('html')[0];
+    
+    if (classNames.length) classNames.push('on-device');
+    if (html.classList) html.classList.add.apply(html.classList, classNames);
+  </script>
+</body>
+</html>
