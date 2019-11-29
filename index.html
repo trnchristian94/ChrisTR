@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="src/img/favicon.ico" />
+     <link rel="icon" href="./src/img/favicon.ico" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
@@ -16,5 +16,15 @@
   <div id="app"></div>
   <script src="./dist/bundle.js"></script>
   <script src="/app/dist/bundle.js"></script>
+  <script>
+    var classNames = [];
+    if (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) classNames.push('device-ios');
+    if (navigator.userAgent.match(/android/i)) classNames.push('device-android');
+    
+    var html = document.getElementsByTagName('html')[0];
+    
+    if (classNames.length) classNames.push('on-device');
+    if (html.classList) html.classList.add.apply(html.classList, classNames);
+  </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+.device-android,
+.device-ios {
+
+  /* Breakpoint only for mobile */
+  .navbar {
+    padding: 5px 0px;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed !important;
+    bottom: 0;
+    width: 100%;
+
+    .navText {
+      display: none !important;
+    }
+
+    #navBar-webName {
+      display: none;
+    }
+
+    .searchBar {
+      display: none;
+    }
+
+    .dropdown-menu {
+      top: unset;
+      bottom: 40px;
+    }
+  }
+}

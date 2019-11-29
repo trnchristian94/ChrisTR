@@ -12,6 +12,7 @@ import "styles/app.scss";
 import "styles/defaults.scss";
 import "styles/defaultLightMode.scss";
 import "styles/defaultNightMode.scss";
+import "styles/defaultMobile.scss";
 
 const App: React.FC = () => {
   const { t } = useTranslation();
