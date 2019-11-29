@@ -5,7 +5,10 @@ import {
   Form,
   FormControl,
   Nav,
-  Navbar
+  Navbar,
+  Container,
+  Row,
+  Col
 } from "react-bootstrap";
 
 import Icon from "components/core/view/Icon";
@@ -20,45 +23,56 @@ export default function NavigationBar() {
 
   return (
     <Navbar bg="dark" variant="dark">
-      <a href="#home">
-        <div id="navBar-webName">
-          <Navbar.Brand className="name">{t("navBar.title")}</Navbar.Brand>
-          <Icon name="logo" />
-        </div>
-      </a>
-      <Nav className="mr-auto">
-        <li className="navButton">
-          <Link to={"/"} className="nav-link">
-            {t("navBar.home")}
-            <Icon name="home" boxSize={20} />
-          </Link>
-        </li>
-        <li className="navButton">
-          <Link to={"/contact"} className="nav-link">
-            {t("navBar.contact")}
-            <Icon name="contact" boxSize={20} />
-          </Link>
-        </li>
-        <li className="navButton">
-          <Link to={"/about"} className="nav-link">
-            {t("navBar.about")}
-            <Icon name="info" boxSize={20} />
-          </Link>
-        </li>
-      </Nav>
-      <LightSwitch />
-      <Form inline>
-        <LanguageSelector />
-        <FormControl
-          type="text"
-          placeholder={t("navBar.search")}
-          className="mr-sm-2"
-        />
-        <Button className="searchBtn" variant="outline-info">
-          {t("navBar.searchBtn")}
-          <Icon name="search" boxSize={20} />
-        </Button>
-      </Form>
+      <Container>
+        <Row noGutters={true}>
+          <a href="#home">
+            <div id="navBar-webName">
+              <Navbar.Brand className="name">{t("navBar.title")}</Navbar.Brand>
+              <Icon name="logo" />
+            </div>
+          </a>
+
+          <Col>
+            <Nav className="mr-auto">
+              <li className="navButton">
+                <Link to={"/"} className="nav-link">
+                  <span className="navText">{t("navBar.home")}</span>
+                  <Icon name="home" boxSize={20} />
+                </Link>
+              </li>
+              <li className="navButton">
+                <Link to={"/contact"} className="nav-link">
+                  <span className="navText">{t("navBar.contact")}</span>
+                  <Icon name="contact" boxSize={20} />
+                </Link>
+              </li>
+              <li className="navButton">
+                <Link to={"/about"} className="nav-link">
+                  <span className="navText">{t("navBar.about")}</span>
+                  <Icon name="info" boxSize={20} />
+                </Link>
+              </li>
+            </Nav>
+          </Col>
+          <Col>
+            <LightSwitch />
+          </Col>
+          <Col>
+            <LanguageSelector />
+          </Col>
+          <Form inline className="searchBar">
+            <FormControl
+              type="text"
+              placeholder={t("navBar.search")}
+              className="mr-sm-2"
+            />
+            <Button className="searchBtn" variant="outline-info">
+              {t("navBar.searchBtn")}
+              <Icon name="search" boxSize={20} />
+            </Button>
+          </Form>
+        </Row>
+      </Container>
     </Navbar>
   );
 }

@@ -21,6 +21,17 @@
 }
 
 .navbar {
+
+    .container .col,
+    .spIcon>span,
+    .custom-control-label::before,
+    .custom-control-label::after {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    width: 100%;
+
     .navButton {
         margin-right: 15px;
 
@@ -70,10 +81,17 @@
         color: white;
         margin-right: 10px;
         width: 85px;
+        display: inline-flex;
+        align-items: center;
+
+        .spIcon {
+            display: inline-flex;
+        }
 
         .custom-control-label {
             position: absolute;
             left: 63px;
+            height: 100%;
         }
 
         .custom-control-input.is-invalid:checked~.custom-control-label::before,

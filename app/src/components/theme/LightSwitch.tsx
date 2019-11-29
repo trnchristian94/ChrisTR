@@ -22,17 +22,15 @@ export default function LightSwitch() {
   };
 
   return (
-    <div>
-      <FormCheck custom className="switchLights" type="switch">
-        <Icon name="sun" boxSize={20} />
-        <FormCheck.Input
-          isInvalid={themeState.dark}
-          checked={themeState.dark}
-          readOnly
-        />
-        <FormCheck.Label onClick={changeMode} />
-        <Icon name="moon" boxSize={20} />
-      </FormCheck>
-    </div>
+    <FormCheck custom className="switchLights" type="switch">
+      <Icon name="sun" boxSize={20} />
+      <FormCheck.Input
+        isInvalid={themeState.dark}
+        checked={themeState.dark}
+        readOnly
+      />
+      <FormCheck.Label onClick={changeMode} />
+      <Icon name="moon" boxSize={20} />
+    </FormCheck>
   );
 }
