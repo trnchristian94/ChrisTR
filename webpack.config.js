@@ -1,4 +1,6 @@
 const path = require('path');
+var Dotenv = require('dotenv-webpack');
+
 module.exports = {
     mode: "development",
     entry: "./app/src/index.tsx",
@@ -42,7 +44,7 @@ module.exports = {
     },
     devServer: {
         port: 3001,
-        contentBase: path.resolve(__dirname, 'app/'), 
+        contentBase: path.resolve(__dirname, 'app/'),
         publicPath: '/app/dist/',
         watchContentBase: true,
         inline: true,
@@ -51,5 +53,13 @@ module.exports = {
         watchOptions: {
             poll: true
         }
-    }
+    },
+    node: {
+        fs: 'empty'
+    },
+    plugins: [
+        new Dotenv({
+            path: path.resolve(__dirname, '.', '.env'),
+        }),
+    ]
 };
