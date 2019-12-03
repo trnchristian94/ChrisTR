@@ -6,7 +6,8 @@ module.exports = {
     entry: "./app/src/index.tsx",
     output: {
         filename: "bundle.js",
-        path: __dirname + "/app/dist"
+        path: __dirname + "/app/dist",
+        publicPath: "/"
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
@@ -52,6 +53,9 @@ module.exports = {
         compress: true,
         watchOptions: {
             poll: true
+        },
+        historyApiFallback: {
+            index: '/'
         }
     },
     node: {
