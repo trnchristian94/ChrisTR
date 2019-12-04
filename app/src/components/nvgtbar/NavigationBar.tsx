@@ -23,7 +23,7 @@ export default function NavigationBar() {
 
   return (
     <Navbar bg="dark" variant="dark">
-      <Container>
+      <Container fluid={true}>
         <Row noGutters={true}>
           <a href="#home">
             <div id="navBar-webName">
@@ -31,7 +31,6 @@ export default function NavigationBar() {
               <Icon name="logo" />
             </div>
           </a>
-
           <Col>
             <Nav className="mr-auto">
               <li className="navButton">
@@ -50,6 +49,12 @@ export default function NavigationBar() {
                 <Link to={"/about"} className="nav-link">
                   <span className="navText">{t("navBar.about")}</span>
                   <Icon name="info" boxSize={20} />
+                </Link>
+              </li>
+              <li className="navButton">
+                <Link to={"/comments"} className="nav-link">
+                  <span className="navText">{t("navBar.comments")}</span>
+                  <Icon name="comment" boxSize={20} />
                 </Link>
               </li>
             </Nav>

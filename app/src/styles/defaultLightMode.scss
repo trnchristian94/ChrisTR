@@ -1,8 +1,6 @@
 @import "src/styles/_variables.scss";
 
-.lightMode {
-    .App-header {
-        background-color: $white10;
-        color: $black10;
-    }
+.lightMode.App {
+    background-color: $white10;
+    color: $black10;
 }
