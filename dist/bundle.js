@@ -1027,7 +1027,7 @@ exports.default = theme;
 /*! exports provided: navBar, home, contact, about, welcome, comments, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Home\",\"contact\":\"Contact\",\"about\":\"About\",\"comments\":\"Comments\",\"languageSelector\":{\"language\":\"Language\",\"spanish\":\"Spanish\",\"french\":\"French\",\"english\":\"English\"},\"search\":\"Search...\",\"searchBtn\":\"Search\",\"nightModeSwitch\":\"Switch to night mode\",\"lightModeSwitch\":\"Switch to light mode\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Welcome to Chris TR\"},\"comments\":{\"title\":\"Leave your comment\",\"success\":\"Sent\",\"error\":\"Error\",\"warning\":\"Warning\",\"success_message\":\"Your comment has been sent successfully.\",\"error_message\":\"Your comment could not be sent.\",\"warning_message\":\"Please fill in the fields.\",\"name\":\"Name\",\"comment\":\"Comment\"}}");
+module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Home\",\"contact\":\"Contact\",\"about\":\"About\",\"comments\":\"Comments\",\"languageSelector\":{\"language\":\"Language\",\"spanish\":\"Spanish\",\"french\":\"French\",\"english\":\"English\"},\"search\":\"Search...\",\"searchBtn\":\"Search\",\"nightModeSwitch\":\"Switch to night mode\",\"lightModeSwitch\":\"Switch to light mode\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Welcome to Chris TR\"},\"comments\":{\"title\":\"Leave your comment\",\"success\":\"Sent\",\"error\":\"Error\",\"warning\":\"Warning\",\"success_message\":\"Your comment has been sent successfully.\",\"error_message\":\"Your comment could not be sent.\",\"warning_message\":\"Please fill in the fields.\",\"name\":\"Name\",\"comment\":\"Comment\",\"send\":\"Send\"}}");
 
 /***/ }),
 
@@ -1038,7 +1038,7 @@ module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":
 /*! exports provided: navBar, home, contact, about, welcome, comments, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Inicio\",\"contact\":\"Contacto\",\"about\":\"Información\",\"comments\":\"Comentarios\",\"languageSelector\":{\"language\":\"Idioma\",\"spanish\":\"Español\",\"french\":\"Francés\",\"english\":\"Inglés\"},\"search\":\"Busqueda...\",\"searchBtn\":\"Buscar\",\"nightModeSwitch\":\"Apagar luces\",\"lightModeSwitch\":\"Encender luces\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Bienvenido a Chris TR\"},\"comments\":{\"title\":\"Deja tu comentario\",\"success\":\"Enviado\",\"error\":\"Error\",\"warning\":\"Aviso\",\"success_message\":\"Tu comentario se ha enviado correctamente.\",\"error_message\":\"Tu comentario no se ha podido enviar.\",\"warning_message\":\"Por favor, rellena los campos.\",\"name\":\"Nombre\",\"comment\":\"Comentario\"}}");
+module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Inicio\",\"contact\":\"Contacto\",\"about\":\"Información\",\"comments\":\"Comentarios\",\"languageSelector\":{\"language\":\"Idioma\",\"spanish\":\"Español\",\"french\":\"Francés\",\"english\":\"Inglés\"},\"search\":\"Busqueda...\",\"searchBtn\":\"Buscar\",\"nightModeSwitch\":\"Apagar luces\",\"lightModeSwitch\":\"Encender luces\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Bienvenido a Chris TR\"},\"comments\":{\"title\":\"Deja tu comentario\",\"success\":\"Enviado\",\"error\":\"Error\",\"warning\":\"Aviso\",\"success_message\":\"Tu comentario se ha enviado correctamente.\",\"error_message\":\"Tu comentario no se ha podido enviar.\",\"warning_message\":\"Por favor, rellena los campos.\",\"name\":\"Nombre\",\"comment\":\"Comentario\",\"send\":\"Enviar\"}}");
 
 /***/ }),
 
@@ -1049,7 +1049,7 @@ module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":
 /*! exports provided: navBar, home, contact, about, welcome, comments, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Accueil\",\"contact\":\"Contact\",\"about\":\"À Propos\",\"comments\":\"Commentaires\",\"languageSelector\":{\"language\":\"Langage\",\"spanish\":\"Espagnol\",\"french\":\"Français\",\"english\":\"Anglais\"},\"search\":\"Cherchez...\",\"searchBtn\":\"Rechercher\",\"nightModeSwitch\":\"Mode nuit\",\"lightModeSwitch\":\"Mode jour\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Bienvenue chez Chris TR\"},\"comments\":{\"title\":\"Laissez votre commentaire\",\"success\":\"Envoyé\",\"error\":\"Erreur\",\"warning\":\"Avertissement\",\"success_message\":\"Votre commentaire a été envoyé avec succès.\",\"error_message\":\"Votre commentaire n'a pas pu être envoyé.\",\"warning_message\":\"Veuillez remplir les champs.\",\"name\":\"Prenom\",\"comment\":\"Commentaire\"}}");
+module.exports = JSON.parse("{\"navBar\":{\"title\":\"Christian T.R.\",\"home\":\"Accueil\",\"contact\":\"Contact\",\"about\":\"À Propos\",\"comments\":\"Commentaires\",\"languageSelector\":{\"language\":\"Langage\",\"spanish\":\"Espagnol\",\"french\":\"Français\",\"english\":\"Anglais\"},\"search\":\"Cherchez...\",\"searchBtn\":\"Rechercher\",\"nightModeSwitch\":\"Mode nuit\",\"lightModeSwitch\":\"Mode jour\"},\"home\":{},\"contact\":{},\"about\":{},\"welcome\":{\"title\":\"Bienvenue chez Chris TR\"},\"comments\":{\"title\":\"Laissez votre commentaire\",\"success\":\"Envoyé\",\"error\":\"Erreur\",\"warning\":\"Avertissement\",\"success_message\":\"Votre commentaire a été envoyé avec succès.\",\"error_message\":\"Votre commentaire n'a pas pu être envoyé.\",\"warning_message\":\"Veuillez remplir les champs.\",\"name\":\"Prenom\",\"comment\":\"Commentaire\",\"send\":\"Envoyer\"}}");
 
 /***/ }),
 
@@ -1484,7 +1484,7 @@ function Comment() {
   })), react_1.default.createElement("button", {
     type: "submit",
     className: "btn btn-primary"
-  }, "Send"))))));
+  }, t("comments.send")))))));
 }
 
 exports.default = Comment;
