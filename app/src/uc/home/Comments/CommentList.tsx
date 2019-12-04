@@ -38,7 +38,7 @@ export default function CommentList() {
                 <span className="comment_userName">{comments[key].name}</span>
                 <span className="comment_time">
                   <span className="comment_date">{`${date.year}/${date.month}/${date.day}`}</span>
-                  <span className="comment_hour">{`${date.hour}:${date.minutes}:${date.seconds}`}</span>
+                  <span className="comment_hour">{`${date.hour}:${date.minutes}`}</span>
                 </span>
               </div>
               <div className="comment_message">{comments[key].message}</div>
