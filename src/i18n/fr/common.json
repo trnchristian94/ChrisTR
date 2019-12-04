@@ -4,6 +4,7 @@
         "home": "Accueil",
         "contact": "Contact",
         "about": "À Propos",
+        "comments": "Commentaires",
         "languageSelector":{
             "language": "Langage",
             "spanish": "Espagnol",
@@ -23,5 +24,16 @@
     },
     "welcome": {
         "title": "Bienvenue chez Chris TR"
+    },
+    "comments": {
+        "title": "Laissez votre commentaire",
+        "success": "Envoyé",
+        "error": "Erreur",
+        "warning": "Avertissement",
+        "success_message": "Votre commentaire a été envoyé avec succès.",
+        "error_message": "Votre commentaire n'a pas pu être envoyé.",
+        "warning_message": "Veuillez remplir les champs.",
+        "name": "Prenom",
+        "comment": "Commentaire"
     }
 }

@@ -4,12 +4,19 @@ import ReactSVG from "react-svg";
 interface IProps {
   name: string;
   boxSize?: number;
+  subFolder?: string;
 }
 
 export default function Icon(props: IProps) {
+  let sourceIcon = "/src/img/icons/" + props.name + ".svg";
+  if (props.subFolder) {
+    sourceIcon =
+      "/src/img/icons/" + props.subFolder + "/" + props.name + ".svg";
+  }
+
   return (
     <ReactSVG
-      src={"src/img/icons/" + props.name + ".svg"}
+      src={sourceIcon}
       afterInjection={(error, svg) => {
         if (error) {
           //console.error(error);
@@ -27,6 +34,7 @@ export default function Icon(props: IProps) {
           );
         }
       }}
+      style={{ width: props.boxSize + "px", height: props.boxSize + "px" }}
       fallback={() => <span>Error!</span>}
       loading={() => <span>Loading</span>}
       renumerateIRIElements={false}

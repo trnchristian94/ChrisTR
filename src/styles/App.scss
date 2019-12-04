@@ -1,24 +1,14 @@
 @import "src/styles/_variables.scss";
 
-.App {
-  text-align: center;
+.App-header {
+  min-height: 94vh;
+  padding: 16px;
 }
 
 .App-logo {
   height: 40vmin;
 }
 
-// Changed colors in defaultNight/Lightmode
-.App-header {
-  background-color: $black10;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: $white10;
-}
 
 .App-link {
   color: #09d3ac;

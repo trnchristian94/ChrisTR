@@ -1,10 +1,11 @@
 {
-    "navBar":{
+    "navBar": {
         "title": "Christian T.R.",
         "home": "Home",
         "contact": "Contact",
         "about": "About",
-        "languageSelector":{
+        "comments": "Comments",
+        "languageSelector": {
             "language": "Language",
             "spanish": "Spanish",
             "french": "French",
@@ -15,13 +16,21 @@
         "nightModeSwitch": "Switch to night mode",
         "lightModeSwitch": "Switch to light mode"
     },
-    "home":{
-    },
-    "contact":{
-    },
-    "about":{
-    },
+    "home": {},
+    "contact": {},
+    "about": {},
     "welcome": {
         "title": "Welcome to Chris TR"
+    },
+    "comments": {
+        "title": "Leave your comment",
+        "success": "Sent",
+        "error": "Error",
+        "warning": "Warning",
+        "success_message": "Your comment has been sent successfully.",
+        "error_message": "Your comment could not be sent.",
+        "warning_message": "Please fill in the fields.",
+        "name": "Name",
+        "comment": "Comment"
     }
 }

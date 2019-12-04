@@ -22,7 +22,7 @@
 
 .navbar {
 
-    .container .col,
+    .container-fluid .col,
     .spIcon>span,
     .custom-control-label::before,
     .custom-control-label::after {
@@ -70,7 +70,8 @@
     .ic-home,
     .ic-contact,
     .ic-info,
-    .ic-search {
+    .ic-search,
+    .ic-comment {
         display: inline-flex;
         align-items: center;
         fill: white;
