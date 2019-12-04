@@ -1369,6 +1369,10 @@ var firebase_1 = __importDefault(__webpack_require__(/*! src/Firebase/firebase *
 
 var react_i18next_1 = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
 
+var Date_1 = __webpack_require__(/*! utils/Date */ "./app/src/utils/Date.tsx");
+
+var Digit_1 = __webpack_require__(/*! utils/Digit */ "./app/src/utils/Digit.tsx");
+
 __webpack_require__(/*! ./comments.scss */ "./app/src/uc/home/Comments/comments.scss");
 
 function Comment() {
@@ -1394,13 +1398,8 @@ function Comment() {
   var contactForm;
   var inputName;
   var textAreaMessage;
-  var randomNumber; //Get a randomnumber. Create utils and send it to it.
-
-  var min = 1;
-  var max = 60;
-  randomNumber = min + Math.floor(Math.random() * (max - min));
-  randomNumber = randomNumber.toString();
-  randomNumber = randomNumber.length == 2 ? "0" + randomNumber : randomNumber.length == 1 ? "00" + randomNumber : randomNumber; // Mostrar una alerta cuando se envia el formulario
+  var randomNumber;
+  randomNumber = Digit_1.getRandomNumber(1, 60); // Mostrar una alerta cuando se envia el formulario
 
   var showAlert = function showAlert(type, message) {
     setAlertData({
@@ -1426,7 +1425,8 @@ function Comment() {
     var params = {
       name: inputName.value,
       message: textAreaMessage.value,
-      avatarNumber: randomNumber + "-avatar"
+      avatarNumber: randomNumber + "-avatar",
+      date: Date_1.getCurrentDateAndTime("-")
     };
 
     if (params.name && params.message) {
@@ -1529,6 +1529,8 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 
 var Icon_1 = __importDefault(__webpack_require__(/*! components/core/view/Icon */ "./app/src/components/core/view/Icon.tsx"));
 
+var Date_1 = __webpack_require__(/*! utils/Date */ "./app/src/utils/Date.tsx");
+
 var firebase_1 = __importDefault(__webpack_require__(/*! src/Firebase/firebase */ "./app/src/Firebase/firebase.tsx"));
 
 function CommentList() {
@@ -1548,7 +1550,8 @@ function CommentList() {
   var renderGrid = function renderGrid() {
     if (comments) {
       var comment = [];
-      Object.keys(comments).forEach(function (key) {
+      Object.keys(comments).reverse().forEach(function (key) {
+        var date = Date_1.formatTime(comments[key].date);
         comment.push(react_1.default.createElement("div", {
           className: "comment",
           key: key
@@ -1560,7 +1563,13 @@ function CommentList() {
           boxSize: 40
         })), react_1.default.createElement("span", {
           className: "comment_userName"
-        }, comments[key].name)), react_1.default.createElement("div", {
+        }, comments[key].name), react_1.default.createElement("span", {
+          className: "comment_time"
+        }, react_1.default.createElement("span", {
+          className: "comment_date"
+        }, "".concat(date.year, "/").concat(date.month, "/").concat(date.day)), react_1.default.createElement("span", {
+          className: "comment_hour"
+        }, "".concat(date.hour, ":").concat(date.minutes, ":").concat(date.seconds)))), react_1.default.createElement("div", {
           className: "comment_message"
         }, comments[key].message))); // do something with obj
       });
@@ -1601,6 +1610,80 @@ if (content.locals) {
   module.exports = content.locals;
 }
 
+
+/***/ }),
+
+/***/ "./app/src/utils/Date.tsx":
+/*!********************************!*\
+  !*** ./app/src/utils/Date.tsx ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.getCurrentDateAndTime = function (separator) {
+  separator = separator === undefined ? "" : separator;
+  var newDate = new Date();
+  var year = newDate.getFullYear();
+  var month = newDate.getMonth() + 1;
+  var day = newDate.getDate();
+  var hour = newDate.getHours();
+  var minutes = newDate.getMinutes();
+  var seconds = newDate.getSeconds();
+  return "".concat(year).concat(separator).concat(month < 10 ? "0".concat(month) : "".concat(month)).concat(separator).concat(day < 10 ? "0".concat(day) : "".concat(day)).concat(separator).concat(exports.getCurrentTime(separator));
+};
+
+exports.getCurrentTime = function (separator) {
+  var newDate = new Date();
+  var seconds = newDate.getSeconds();
+  var minutes = newDate.getMinutes();
+  var hour = newDate.getHours();
+  return "".concat(hour < 10 ? "0".concat(hour) : "".concat(hour)).concat(separator).concat(minutes < 10 ? "0".concat(minutes) : "".concat(minutes)).concat(separator).concat(seconds < 10 ? "0".concat(seconds) : "".concat(seconds));
+};
+
+exports.formatTime = function (date) {
+  var time = {};
+  time = date.split("-");
+  time.year = time[0];
+  time.month = time[1];
+  time.day = time[2];
+  time.hour = time[3];
+  time.minutes = time[4];
+  time.seconds = time[5];
+  return time;
+};
+
+/***/ }),
+
+/***/ "./app/src/utils/Digit.tsx":
+/*!*********************************!*\
+  !*** ./app/src/utils/Digit.tsx ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.getRandomNumber = function (min, max) {
+  //Get a randomnumber. Create utils and send it to it.
+  min = min === undefined ? 1 : min;
+  max = max === undefined ? 100 : max;
+  var randomNumber = min + Math.floor(Math.random() * (max - min));
+  randomNumber = randomNumber.toString();
+  randomNumber = randomNumber.length == 2 ? "0" + randomNumber : randomNumber.length == 1 ? "00" + randomNumber : randomNumber;
+  return randomNumber;
+};
 
 /***/ }),
 
@@ -41805,7 +41888,7 @@ exports.push([module.i, "html,\nbody {\n  overflow-x: hidden;\n  width: 100%;\n 
 
 exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".form-group input,\n.form-group select,\n.form-group textarea {\n  width: 270px; }\n\n.nightMode .comment {\n  background-color: rgba(239, 253, 255, 0.7);\n  color: #282c34; }\n\n.lightMode .comment {\n  background-color: rgba(40, 44, 52, 0.7);\n  color: #effdff; }\n\n.comment {\n  border-radius: 5px;\n  margin-top: 10px;\n  padding: 10px;\n  width: 50%; }\n  .comment .comment_userName {\n    font-weight: 600;\n    margin-left: 5px; }\n  .comment .comment_avatar {\n    display: inline-block; }\n    .comment .comment_avatar .spIcon {\n      display: inline-block;\n      box-sizing: content-box; }\n  .comment .comment_message {\n    margin-top: 5px; }\n\n.device-android .comment,\n.device-ios .comment {\n  width: 100%; }\n", ""]);
+exports.push([module.i, ".form-group input,\n.form-group select,\n.form-group textarea {\n  width: 270px; }\n\n.nightMode .comment {\n  background-color: rgba(239, 253, 255, 0.7);\n  color: #282c34; }\n\n.lightMode .comment {\n  background-color: rgba(40, 44, 52, 0.7);\n  color: #effdff; }\n\n.comment {\n  border-radius: 5px;\n  margin-top: 10px;\n  padding: 10px;\n  width: 50%;\n  position: relative; }\n  .comment .comment_userName {\n    font-weight: 600;\n    margin-left: 5px; }\n  .comment .comment_avatar {\n    display: inline-block; }\n    .comment .comment_avatar .spIcon {\n      display: inline-block;\n      box-sizing: content-box; }\n  .comment .comment_time {\n    position: absolute;\n    top: 2px;\n    right: 2px;\n    font-size: 0.8em; }\n    .comment .comment_time .comment_date,\n    .comment .comment_time .comment_hour {\n      display: block; }\n    .comment .comment_time .comment_hour {\n      float: right; }\n  .comment .comment_message {\n    margin-top: 5px; }\n\n.device-android .comment,\n.device-ios .comment {\n  width: 100%; }\n", ""]);
 
 
 /***/ }),

@@ -24,6 +24,7 @@
     margin-top: 10px;
     padding: 10px;
     width: 50%;
+    position: relative;
 
     .comment_userName {
         font-weight: 600;
@@ -38,6 +39,24 @@
             box-sizing: content-box;
         }
     }
+
+    .comment_time {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 0.8em;
+
+
+        .comment_date,
+        .comment_hour {
+            display: block;
+        }
+
+        .comment_hour {
+            float: right;
+        }
+    }
+
 
     .comment_message {
         margin-top: 5px;
