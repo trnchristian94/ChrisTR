@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Chris TR Project",
   "main": "index.js",
-  "homepage": "https://trnchristian94.github.io/ChrisTR",
+  "homepage": ".",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack:dev": "npx webpack --config webpack.config.js --watch",

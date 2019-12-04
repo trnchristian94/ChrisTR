@@ -1,6 +1,8 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import firebase from "src/Firebase/firebase";
 import { useTranslation } from "react-i18next";
+import { getCurrentDateAndTime } from "utils/Date";
+import { getRandomNumber } from "utils/Digit";
 
 import "./comments.scss";
 
@@ -15,18 +17,7 @@ export default function Comment() {
   let inputName: any;
   let textAreaMessage: any;
   let randomNumber: any;
-
-  //Get a randomnumber. Create utils and send it to it.
-  const min = 1;
-  const max = 60;
-  randomNumber = min + Math.floor(Math.random() * (max - min));
-  randomNumber = randomNumber.toString();
-  randomNumber =
-    randomNumber.length == 2
-      ? "0" + randomNumber
-      : randomNumber.length == 1
-      ? "00" + randomNumber
-      : randomNumber;
+  randomNumber = getRandomNumber(1, 60);
 
   // Mostrar una alerta cuando se envia el formulario
   let showAlert = (type: any, message: string): any => {
@@ -51,7 +42,8 @@ export default function Comment() {
     const params = {
       name: inputName.value,
       message: textAreaMessage.value,
-      avatarNumber: randomNumber + "-avatar"
+      avatarNumber: randomNumber + "-avatar",
+      date: getCurrentDateAndTime("-")
     };
     if (params.name && params.message) {
       // Enviar objeto a firebase
