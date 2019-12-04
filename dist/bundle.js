@@ -1375,6 +1375,9 @@ var Digit_1 = __webpack_require__(/*! utils/Digit */ "./app/src/utils/Digit.tsx"
 
 __webpack_require__(/*! ./comments.scss */ "./app/src/uc/home/Comments/comments.scss");
 
+var randomNumber;
+randomNumber = Digit_1.getRandomNumber(1, 60);
+
 function Comment() {
   // inicializamos nuestro estado inicial
   var _react_1$useState = react_1.useState({}),
@@ -1397,9 +1400,7 @@ function Comment() {
 
   var contactForm;
   var inputName;
-  var textAreaMessage;
-  var randomNumber;
-  randomNumber = Digit_1.getRandomNumber(1, 60); // Mostrar una alerta cuando se envia el formulario
+  var textAreaMessage; // Mostrar una alerta cuando se envia el formulario
 
   var showAlert = function showAlert(type, message) {
     setAlertData({
@@ -1414,7 +1415,9 @@ function Comment() {
 
 
   var resetForm = function resetForm() {
+    var lastInputName = inputName.value;
     contactForm.reset();
+    inputName.value = lastInputName;
   }; // Funcion para enviar la informacion del formulario a Firebase Database
 
 
@@ -1463,6 +1466,7 @@ function Comment() {
     className: "form-control",
     id: "name",
     placeholder: t("comments.name"),
+    value: inputName,
     ref: function ref(input) {
       inputName = input;
     }
@@ -1569,7 +1573,7 @@ function CommentList() {
           className: "comment_date"
         }, "".concat(date.year, "/").concat(date.month, "/").concat(date.day)), react_1.default.createElement("span", {
           className: "comment_hour"
-        }, "".concat(date.hour, ":").concat(date.minutes, ":").concat(date.seconds)))), react_1.default.createElement("div", {
+        }, "".concat(date.hour, ":").concat(date.minutes)))), react_1.default.createElement("div", {
           className: "comment_message"
         }, comments[key].message))); // do something with obj
       });

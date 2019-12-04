@@ -6,6 +6,8 @@ import { getRandomNumber } from "utils/Digit";
 
 import "./comments.scss";
 
+let randomNumber: any;
+randomNumber = getRandomNumber(1, 60);
 export default function Comment() {
   // inicializamos nuestro estado inicial
   const [form, setForm] = useState({});
@@ -16,8 +18,6 @@ export default function Comment() {
   let contactForm: any;
   let inputName: any;
   let textAreaMessage: any;
-  let randomNumber: any;
-  randomNumber = getRandomNumber(1, 60);
 
   // Mostrar una alerta cuando se envia el formulario
   let showAlert = (type: any, message: string): any => {
@@ -30,7 +30,9 @@ export default function Comment() {
 
   // Con esta funcion borramos todos los elementos del formulario
   const resetForm = () => {
+    let lastInputName = inputName.value;
     contactForm.reset();
+    inputName.value = lastInputName;
   };
 
   // Funcion para enviar la informacion del formulario a Firebase Database
@@ -91,6 +93,7 @@ export default function Comment() {
                   className="form-control"
                   id="name"
                   placeholder={t("comments.name")}
+                  value={inputName}
                   ref={input => {
                     inputName = input;
                   }}
