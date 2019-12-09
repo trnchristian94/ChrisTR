@@ -111,7 +111,7 @@ export default function Comment() {
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-primary">
-                Send
+                {t("comments.send")}
               </button>
             </form>
           </div>

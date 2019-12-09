@@ -1,11 +1,11 @@
 {
-    "navBar":{
+    "navBar": {
         "title": "Christian T.R.",
         "home": "Accueil",
         "contact": "Contact",
         "about": "À Propos",
         "comments": "Commentaires",
-        "languageSelector":{
+        "languageSelector": {
             "language": "Langage",
             "spanish": "Espagnol",
             "french": "Français",
@@ -16,12 +16,9 @@
         "nightModeSwitch": "Mode nuit",
         "lightModeSwitch": "Mode jour"
     },
-    "home":{
-    },
-    "contact":{
-    },
-    "about":{
-    },
+    "home": {},
+    "contact": {},
+    "about": {},
     "welcome": {
         "title": "Bienvenue chez Chris TR"
     },
@@ -34,6 +31,7 @@
         "error_message": "Votre commentaire n'a pas pu être envoyé.",
         "warning_message": "Veuillez remplir les champs.",
         "name": "Prenom",
-        "comment": "Commentaire"
+        "comment": "Commentaire",
+        "send": "Envoyer"
     }
 }

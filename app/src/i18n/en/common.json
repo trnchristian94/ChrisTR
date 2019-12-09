@@ -31,6 +31,7 @@
         "error_message": "Your comment could not be sent.",
         "warning_message": "Please fill in the fields.",
         "name": "Name",
-        "comment": "Comment"
+        "comment": "Comment",
+        "send": "Send"
     }
 }
