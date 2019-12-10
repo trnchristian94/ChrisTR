@@ -32,6 +32,7 @@
         "warning_message": "Por favor, rellena los campos.",
         "name": "Nombre",
         "comment": "Comentario",
-        "send": "Enviar"
+        "send": "Enviar",
+        "limit_message": "Se ha excedido el límite de tamaño del mensaje."
     }
 }
