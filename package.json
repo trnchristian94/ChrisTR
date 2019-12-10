@@ -9,7 +9,7 @@
     "webpack:dev": "npx webpack --config webpack.config.js --watch",
     "start": "webpack-dev-server --mode development --inline --progress --watch --watch-poll --hot",
     "develop": "webpack-dev-server --open --mode development --config webpack.config.js",
-    "deploy": "npx webpack --config webpack.config.js && gh-pages -d app"
+    "deploy": "npx webpack -p --mode=production --config webpack.config.js && gh-pages -d app"
   },
   "author": "Christian",
   "license": "ISC",

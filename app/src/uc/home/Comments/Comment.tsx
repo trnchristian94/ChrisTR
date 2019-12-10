@@ -13,11 +13,13 @@ export default function Comment() {
   const [form, setForm] = useState({});
   const [alert, setAlert] = useState(false);
   const [alertData, setAlertData] = useState();
+  const [valid, setValid] = useState(true);
   const { t } = useTranslation();
 
   let contactForm: any;
   let inputName: any;
   let textAreaMessage: any;
+  const maxLength: number = 1500;
 
   // Mostrar una alerta cuando se envia el formulario
   let showAlert = (type: any, message: string): any => {
@@ -26,6 +28,16 @@ export default function Comment() {
     setTimeout(() => {
       setAlert(false);
     }, 4000);
+  };
+  let showError = (event: any) => {
+    setValid(false);
+    let node = document.createElement("div");
+    node.classList.add("invalid-feedback");
+    let textnode = document.createTextNode(t("comments.limit_message"));
+    node.appendChild(textnode);
+    event.currentTarget
+      .getElementsByTagName("textarea")[0]
+      .parentNode.append(node);
   };
 
   // Con esta funcion borramos todos los elementos del formulario
@@ -47,6 +59,11 @@ export default function Comment() {
       avatarNumber: randomNumber + "-avatar",
       date: getCurrentDateAndTime("-")
     };
+    debugger;
+    if (params.message.length > maxLength) {
+      showError(e);
+      return;
+    }
     if (params.name && params.message) {
       // Enviar objeto a firebase
       firebase
@@ -102,8 +119,9 @@ export default function Comment() {
               <div className="form-group">
                 <label htmlFor="message">{t("comments.comment")}</label>
                 <textarea
-                  className="form-control"
+                  className={`form-control ${valid ? "" : "is-invalid"}`}
                   id="message"
+                  maxLength={maxLength}
                   placeholder={t("comments.comment")}
                   ref={input => {
                     textAreaMessage = input;
