@@ -1,8 +1,6 @@
-const path = require('path');
+var path = require('path');
 var Dotenv = require('dotenv-webpack');
-
 module.exports = {
-    mode: "development",
     entry: "./app/src/index.tsx",
     output: {
         filename: "bundle.js",
@@ -19,7 +17,6 @@ module.exports = {
             utils: path.resolve(__dirname, 'app/src/utils')
         }
     },
-    devtool: "source-map",
     module: {
         rules: [{
                 test: /\.scss$/,
@@ -44,27 +41,27 @@ module.exports = {
             }
         ]
     },
-    devServer: {
-        port: 3001,
-        contentBase: path.resolve(__dirname, 'app/'),
-        publicPath: '/app/dist/',
-        watchContentBase: true,
-        inline: true,
-        hot: true,
-        compress: true,
-        watchOptions: {
-            poll: true
-        },
-        historyApiFallback: {
-            index: '/'
-        }
-    },
     node: {
         fs: 'empty'
     },
     plugins: [
         new Dotenv({
             path: path.resolve(__dirname, '.', '.env'),
-        }),
-    ]
+        })
+    ],
+    devServer: {
+        writeToDisk: true,
+        port: 3001,
+        contentBase: path.resolve(__dirname, 'app/'),
+        publicPath: '/app/dist/',
+        watchContentBase: true,
+        inline: true,
+        hot: true,
+        watchOptions: {
+            poll: true
+        },
+        historyApiFallback: {
+            index: '/'
+        }
+    }
 };

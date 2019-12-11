@@ -6,10 +6,12 @@
   "homepage": ".",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:dev": "npx webpack --config webpack.config.js --watch",
+    "webpack:dev": "npx webpack --config webpack.dev.js --watch",
+    "webpack:prod": "npx webpack -p --mode=production --config webpack.prod.js",
     "start": "webpack-dev-server --mode development --inline --progress --watch --watch-poll --hot",
+    "devasprod": "webpack-dev-server --open -p --mode=production --config webpack.prod.js",
     "develop": "webpack-dev-server --open --mode development --config webpack.config.js",
-    "deploy": "npx webpack -p --mode=production --config webpack.config.js && gh-pages -d app"
+    "deploy": "npx webpack -p --mode=production --config webpack.prod.js && gh-pages -d app"
   },
   "author": "Christian",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "@types/react-dom": "^16.9.4",
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
+    "compression-webpack-plugin": "^3.0.1",
     "core-js": "^3.4.0",
     "dotenv-webpack": "^1.7.0",
     "emotion-theming": "^10.0.19",
@@ -46,7 +49,9 @@
     "typescript": "^3.7.2",
     "universal-cookie": "^4.0.2",
     "webpack": "^4.41.2",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.2",
