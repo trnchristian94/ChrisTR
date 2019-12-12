@@ -24,13 +24,21 @@ export default function NavigationBar() {
   return (
     <Navbar bg="dark" variant="dark">
       <Container fluid={true}>
-        <Row noGutters={true}>
-          <a href="#home">
-            <div id="navBar-webName">
-              <Navbar.Brand className="name">{t("navBar.title")}</Navbar.Brand>
-              <Icon name="logo" />
-            </div>
-          </a>
+        <Row
+          id="navbar_row"
+          noGutters={true}
+          className="d-flex justify-content-center"
+        >
+          <Col>
+            <a href="#home">
+              <div id="navBar-webName">
+                <Navbar.Brand className="name">
+                  {t("navBar.title")}
+                </Navbar.Brand>
+                <Icon name="logo" />
+              </div>
+            </a>
+          </Col>
           <Col>
             <Nav className="mr-auto">
               <li className="navButton">
@@ -59,23 +67,23 @@ export default function NavigationBar() {
               </li>
             </Nav>
           </Col>
-          <Col>
+          <Col className="justify-content-end">
             <LightSwitch />
-          </Col>
-          <Col>
             <LanguageSelector />
+            <Form inline className="searchBar">
+              <div>
+                <FormControl
+                  type="text"
+                  placeholder={t("navBar.search")}
+                  className="mr-sm-2"
+                />
+                <Button className="searchBtn" variant="outline-info">
+                  {t("navBar.searchBtn")}
+                  <Icon name="search" boxSize={20} />
+                </Button>
+              </div>
+            </Form>
           </Col>
-          <Form inline className="searchBar">
-            <FormControl
-              type="text"
-              placeholder={t("navBar.search")}
-              className="mr-sm-2"
-            />
-            <Button className="searchBtn" variant="outline-info">
-              {t("navBar.searchBtn")}
-              <Icon name="search" boxSize={20} />
-            </Button>
-          </Form>
         </Row>
       </Container>
     </Navbar>
