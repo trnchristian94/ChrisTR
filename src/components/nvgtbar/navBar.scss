@@ -21,7 +21,12 @@
 }
 
 .navbar {
+    #navbar_row {
+        width: 100%;
+    }
+
     z-index: 1;
+
     .container-fluid .col,
     .spIcon>span,
     .custom-control-label::before,
@@ -54,16 +59,24 @@
         }
     }
 
-    .searchBtn {
-        width: 100px;
+    .searchBar>div {
         display: inline-flex;
-        align-items: center;
 
-        span {
+    }
+
+    .searchBar {
+        .searchBtn {
+            width: 100px;
             display: inline-flex;
             align-items: center;
+
+            span {
+                display: inline-flex;
+                align-items: center;
+            }
         }
     }
+
 
 
 
