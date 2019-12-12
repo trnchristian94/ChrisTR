@@ -50,10 +50,9 @@ module.exports = {
         })
     ],
     devServer: {
-        writeToDisk: true,
         port: 3001,
         contentBase: path.resolve(__dirname, 'app/'),
-        publicPath: '/app/dist/',
+        publicPath: '/dist/',
         watchContentBase: true,
         inline: true,
         hot: true,
