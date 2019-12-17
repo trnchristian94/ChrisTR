@@ -1,0 +1,10 @@
+@import "src/styles/_variables.scss";
+
+.carouselChris {
+    max-width: 550px;
+
+    .carousel-caption {
+        color: $white10;
+        text-shadow: 1px 1px 1px $black10;
+    }
+}

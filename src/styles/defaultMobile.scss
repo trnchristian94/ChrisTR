@@ -26,6 +26,11 @@
       top: unset;
       bottom: 40px;
     }
+
+    .dropdownNavbarMenu .dropdown-menu {
+      position: fixed;
+    }
+
   }
 
   .App-header {

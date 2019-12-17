@@ -1,19 +1,9 @@
 import "./navBar.scss";
 import * as React from "react";
-import {
-  Button,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  Container,
-  Row,
-  Col
-} from "react-bootstrap";
+import { Nav, Navbar, Container, Row, Col } from "react-bootstrap";
 
 import Icon from "components/core/view/Icon";
-import LightSwitch from "components/theme/LightSwitch";
-import LanguageSelector from "components/core/view/LanguageSelector";
+import NavbarMenu from "components/nvgtbar/menu/NavbarMenu";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -30,14 +20,7 @@ export default function NavigationBar() {
           className="d-flex justify-content-center"
         >
           <Col>
-            <a href="#home">
-              <div id="navBar-webName">
-                <Navbar.Brand className="name">
-                  {t("navBar.title")}
-                </Navbar.Brand>
-                <Icon name="logo" />
-              </div>
-            </a>
+            <NavbarMenu />
           </Col>
           <Col>
             <Nav className="mr-auto">
@@ -68,21 +51,14 @@ export default function NavigationBar() {
             </Nav>
           </Col>
           <Col className="justify-content-end">
-            <LightSwitch />
-            <LanguageSelector />
-            <Form inline className="searchBar">
-              <div>
-                <FormControl
-                  type="text"
-                  placeholder={t("navBar.search")}
-                  className="mr-sm-2"
-                />
-                <Button className="searchBtn" variant="outline-info">
-                  {t("navBar.searchBtn")}
-                  <Icon name="search" boxSize={20} />
-                </Button>
+            <a href="#home">
+              <div id="navBar-webName">
+                <Navbar.Brand className="name">
+                  {t("navBar.title")}
+                </Navbar.Brand>
+                <Icon name="logo" />
               </div>
-            </Form>
+            </a>
           </Col>
         </Row>
       </Container>

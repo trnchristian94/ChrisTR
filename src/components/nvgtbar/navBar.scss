@@ -8,6 +8,9 @@
 
     .icon {
         width: 30px;
+    }
+
+    .spanIc-logo {
         position: relative;
         right: 28px;
         z-index: 0;
@@ -66,25 +69,16 @@
 
     .searchBar {
         .searchBtn {
-            width: 100px;
-            display: inline-flex;
-            align-items: center;
-
-            span {
-                display: inline-flex;
-                align-items: center;
-            }
+            width: 125px;
         }
     }
-
-
-
 
     .ic-home,
     .ic-contact,
     .ic-info,
     .ic-search,
-    .ic-comment {
+    .ic-comment,
+    .ic-menu {
         display: inline-flex;
         align-items: center;
         fill: white;
@@ -124,6 +118,7 @@
         position: absolute;
         left: 0px;
     }
+
 }
 
 

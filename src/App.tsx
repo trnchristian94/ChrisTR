@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavigationBar from "components/nvgtbar/NavigationBar";
-import Home from "components/nvgtbar/options/Home";
-import About from "components/nvgtbar/options/About";
-import Contact from "components/nvgtbar/options/Contact";
-import Comments from "components/nvgtbar/options/Comments";
+import Home from "src/uc/Home/Home";
+import About from "src/uc/About/About";
+import Contact from "src/uc/Contact/Contact";
+import Comments from "src/uc/Comments/Comments";
 
 import { useTheme } from "components/theme/ThemeContext";
 

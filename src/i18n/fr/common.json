@@ -1,4 +1,5 @@
 {
+    "inProgress": "En progrès",
     "navBar": {
         "title": "Christian T.R.",
         "home": "Accueil",
@@ -18,7 +19,16 @@
     },
     "home": {},
     "contact": {},
-    "about": {},
+    "about": {
+        "gfiSpain" : "GFI Espagne",
+        "gfiSpainFunc" : "Développeur Full-Stack, Java, Javascript, Backbone, et autoformation en React",
+        "gfiSpainPeriod" : "2019 - Present",
+        "teralco" : "Groupe Teralco",
+        "teralcoFunc" : "Développeur Full-Stack, Java, Javascript, ZK",
+        "thanksTo" : "Remerciements",
+        "thanksToMessage" : "Aux collègues qui m'ont formé et qui m'aident chaque jour à apprécier le travail d'équipe",
+        "altImg" : "Image de l'entreprise"
+    },
     "welcome": {
         "title": "Bienvenue chez Chris TR"
     },
