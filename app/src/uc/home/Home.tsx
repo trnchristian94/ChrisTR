@@ -1,11 +1,16 @@
 import * as React from "react";
+import User from "src/Firebase/User";
+import { useTranslation } from "react-i18next";
 
-class About extends React.Component {
-  render() {
-    return (
-      <div>
-        <h2>About</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+export default function Home() {
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      <h2>Home</h2>
+      <p>{t("welcome.title")}</p>
+      <User />
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         feugiat at augue a dapibus. Quisque sapien nunc, pulvinar feugiat congue
         a, pharetra a massa. Suspendisse ullamcorper gravida bibendum. Donec
         aliquet nulla rhoncus orci maximus consectetur. In interdum, leo vel
@@ -39,9 +44,6 @@ class About extends React.Component {
         ut gravida. Praesent vel malesuada est. Vivamus rhoncus nulla felis.
         Vestibulum elementum molestie dignissim. Proin aliquam ultricies
         posuere. This is the end.
-      </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default About;
