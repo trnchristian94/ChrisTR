@@ -1,0 +1,33 @@
+@import "src/styles/_variables.scss";
+
+.navbar {
+    .navBarMenu {
+        position: relative;
+
+        .spanIc-menu {
+            z-index: 1;
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            pointer-events: none;
+        }
+
+        .dropdownNavbarMenu>.dropdown-toggle:after {
+            display: none;
+        }
+
+        .dropdownNavbarMenu>#dropdown-navbarMenu {
+            width: 40px;
+            height: 40px;
+            background-color: #007bff00;
+            border-color: #717171;
+        }
+
+        .dropdownNavbarMenu {
+            .dropdown-menu {
+                background-color: $black20;
+                text-align: center;
+            }
+        }
+    }
+}

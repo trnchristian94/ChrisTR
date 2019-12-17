@@ -8,6 +8,9 @@
 
     .icon {
         width: 30px;
+    }
+
+    .spanIc-logo {
         position: relative;
         right: 28px;
         z-index: 0;
@@ -70,14 +73,12 @@
         }
     }
 
-
-
-
     .ic-home,
     .ic-contact,
     .ic-info,
     .ic-search,
-    .ic-comment {
+    .ic-comment,
+    .ic-menu {
         display: inline-flex;
         align-items: center;
         fill: white;
@@ -117,6 +118,7 @@
         position: absolute;
         left: 0px;
     }
+
 }
 
 

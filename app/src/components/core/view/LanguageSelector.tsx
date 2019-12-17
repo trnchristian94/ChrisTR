@@ -17,9 +17,10 @@ export default function LanguageSelector(props: any) {
 
   return (
     <DropdownButton
-      id="dropdown-basic-button"
+      id="dropdown-languageSelector"
       className="dropdownLanguageSelector"
       title={t("navBar.languageSelector.language")}
+      drop={`right`}
     >
       <Dropdown.Item
         onClick={() => i18n.changeLanguage("es")}
