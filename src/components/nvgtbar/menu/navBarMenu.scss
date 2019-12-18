@@ -30,4 +30,57 @@
             }
         }
     }
+
+    .dropdownLanguageSelector {
+        margin-right: 10px;
+
+        #dropdown-basic-button {
+            width: 100px;
+        }
+    }
+
+    .searchBar>div {
+        display: inline-flex;
+
+    }
+
+    .searchBar {
+        .searchBtn {
+            width: 125px;
+        }
+    }
+
+    .switchLights {
+        color: white;
+        margin-right: 10px;
+        width: 85px;
+        display: inline-flex;
+        align-items: center;
+
+        .spIcon {
+            display: inline-flex;
+        }
+
+        .custom-control-label {
+            position: absolute;
+            left: 63px;
+            height: 100%;
+        }
+
+        .custom-control-input.is-invalid:checked~.custom-control-label::before,
+        .was-validated .custom-control-input:invalid:checked~.custom-control-label::before {
+            border-color: #797979;
+            background-color: #797979;
+        }
+    }
+
+    .spanIc-moon {
+        position: absolute;
+        right: 0px;
+    }
+
+    .spanIc-sun {
+        position: absolute;
+        left: 0px;
+    }
 }

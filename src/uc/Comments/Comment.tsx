@@ -59,7 +59,6 @@ export default function Comment() {
       avatarNumber: randomNumber + "-avatar",
       date: getCurrentDateAndTime("-")
     };
-    debugger;
     if (params.message.length > maxLength) {
       showError(e);
       return;
