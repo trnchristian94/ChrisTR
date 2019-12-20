@@ -24,7 +24,7 @@ const App: React.FC = () => {
         id="principalApp"
       >
         <NavigationBar />
-        <header className="App-header">
+        <div className="App-header">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
@@ -32,7 +32,7 @@ const App: React.FC = () => {
             <Route path="/comments" component={Comments} />
           </Switch>
           <div id="reactV">R-{React.version}</div>
-        </header>
+        </div>
       </div>
     </BrowserRouter>
   );

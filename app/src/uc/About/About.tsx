@@ -11,7 +11,7 @@ export default function About() {
     <div>
       <div>{t("inProgress")}</div>
       <div className="carouselChris container-fluid">
-        <Carousel className="justify-content-center" interval={8000}>
+        <Carousel className="justify-content-center" interval={5000}>
           <Carousel.Item>
             <img
               className="d-block w-100"
